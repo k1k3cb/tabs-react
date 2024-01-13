@@ -1,5 +1,7 @@
+import Tabs from './components/tabs/Tabs';
+
 const App = () => {
-	return <h1>Núcleo de la aplicación</h1>;
+	return <Tabs />;
 };
 
 export default App;
