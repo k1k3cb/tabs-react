@@ -15,15 +15,19 @@ const Tabs = () => {
 		<>
 			<StyledTabContainer>
 				<StyledList>
-					{tabs.map((tab, index) => (
-						<StyledTab
-							key={tab.id}
-							onClick={() => handleTabActive(index, setTabActive)}
-							$active={index === tabActive}
-						>
-							{tab.name}
-						</StyledTab>
-					))}
+					{tabs.map((tab, index) => {
+						// console.log(tab, index);
+
+						return (
+							<StyledTab
+								key={tab.id}
+								onClick={() => handleTabActive(index, setTabActive)}
+								$active={index === tabActive}
+							>
+								{tab.name}
+							</StyledTab>
+						);
+					})}
 				</StyledList>
 			</StyledTabContainer>
 			<p>{tabsInfo[tabActive]}</p>
